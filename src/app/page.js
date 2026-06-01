@@ -29,8 +29,8 @@ export default function Home() {
           <a href="#contact" className={styles.navCta}>Hire Me</a>
 
           {/* Hamburger Menu Toggle Button */}
-          <button 
-            className={`${styles.navToggle} ${isMenuOpen ? styles.navToggleOpen : ''}`} 
+          <button
+            className={`${styles.navToggle} ${isMenuOpen ? styles.navToggleOpen : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle Menu"
             aria-expanded={isMenuOpen}
@@ -69,7 +69,7 @@ export default function Home() {
               Hi, I'm <span className="text-gradient">Eugene.</span>
             </h1>
             <p className={styles.heroSubtitle}>
-              Founder of <strong>Klawz Tech</strong>. AI Data Evaluator & Full Stack Developer — blending precision in data annotation with modern web application engineering.
+              I am the founder of <strong>Klawz Tech</strong>. I work as an AI Data Evaluator and a Full Stack Developer, combining highly detailed data formatting with building clean, functional web applications.
             </p>
             <div className={styles.heroButtons}>
               <a href="#projects" className={styles.primaryBtn}>
@@ -152,7 +152,7 @@ export default function Home() {
                   <h3>Data Accuracy & Clean Code</h3>
                 </div>
                 <p>
-                  My background as an AI Data Evaluator has trained me to spot minor details and bugs that others might miss. I bring this same standard of precision to my engineering work—making sure that components are modular, code is well-structured, and the user interface feels incredibly polished and fluid.
+                  My background as an AI Data Evaluator has trained me to spot minor details and bugs that others might miss. I bring this same standard of precision to my engineering work,making sure that components are modular, code is well-structured, and the user interface feels incredibly polished and fluid.
                 </p>
               </div>
 
@@ -316,7 +316,7 @@ export default function Home() {
                 <span className={styles.techDot}>PostgreSQL</span>
               </div>
               <p className={styles.projectDescription}>
-                <strong>Problem:</strong> Office staff had to physically move between departments to share, track, and manage incoming, outgoing, and internal files — causing delays and lost records.<br /><br />
+                <strong>Problem:</strong> Office staff had to physically move between departments to share, track, and manage incoming, outgoing, and internal files, which caused major delays and lost records.<br /><br />
                 <strong>Built:</strong> A centralized digital file hub with role-based access, allowing departments to log and receive files, track status (incoming / outgoing / internal), and share documents instantly without leaving their desks.<br /><br />
                 <strong>Learned:</strong> Designing multi-role access systems, building real-time file tracking workflows, and optimizing database queries for organizational record management.
               </p>
