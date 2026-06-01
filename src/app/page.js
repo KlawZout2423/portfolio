@@ -255,13 +255,14 @@ export default function Home() {
               <h3 className={styles.projectTitle}>🏡 Ho Rentals</h3>
               <div className={styles.projectTech}>
                 <span className={styles.techDot}>Next.js</span>
-                <span className={styles.techDot}>Firebase</span>
+                <span className={styles.techDot}>Railway</span>
+                <span className={styles.techDot}>Cloudinary</span>
                 <span className={styles.techDot}>Google Maps API</span>
               </div>
               <p className={styles.projectDescription}>
                 <strong>Problem:</strong> Renters struggled to find listings close to university campuses with accurate pricing and geolocations.<br /><br />
                 <strong>Built:</strong> Property listing manager, filterable maps, high-fidelity image carousels, and WhatsApp direct contact flow.<br /><br />
-                <strong>Learned:</strong> Integrating geolocation APIs, handling image uploads to cloud storage, and responsive map layouts.
+                <strong>Learned:</strong> Integrating geolocation APIs, handling high-fidelity image uploads to Cloudinary, and responsive map layouts.
               </p>
               <div className={styles.projectLinks}>
                 <a href="https://horental-website.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.projectCta}>
@@ -311,7 +312,6 @@ export default function Home() {
                 <span className={styles.techDot}>Next.js</span>
                 <span className={styles.techDot}>Vercel</span>
                 <span className={styles.techDot}>PostgreSQL</span>
-                <span className={styles.techDot}>Firebase</span>
               </div>
               <p className={styles.projectDescription}>
                 <strong>Problem:</strong> Office staff had to physically move between departments to share, track, and manage incoming, outgoing, and internal files — causing delays and lost records.<br /><br />
