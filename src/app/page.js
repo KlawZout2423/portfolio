@@ -139,20 +139,20 @@ export default function Home() {
               <div className={`${styles.aboutCard} glass`}>
                 <div className={styles.aboutCardHeader}>
                   <svg className={styles.aboutIcon} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--m-light-blue)" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
-                  <h3>The Vision & Strategy</h3>
+                  <h3>What I Do & How I Help</h3>
                 </div>
                 <p>
-                  With a strong foundation in modern web technologies and systematic IT support, I specialize in building highly functional, clean, and scalable frontend applications. As the head of <strong>Klawz Tech</strong>, I turn complex business ideas into digital solutions that solve real-world problems.
+                  I focus on writing clean, readable code and building web apps that load fast and work perfectly on all screen sizes. As the head of <strong>Klawz Tech</strong>, I work closely with business owners to understand what they need, then design and build the front-end interfaces and backend systems to bring their ideas to life.
                 </p>
               </div>
 
               <div className={`${styles.aboutCard} glass`}>
                 <div className={styles.aboutCardHeader}>
                   <svg className={styles.aboutIcon} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--m-red)" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2m0 10v10M2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
-                  <h3>AI-Driven Precision</h3>
+                  <h3>Data Accuracy & Clean Code</h3>
                 </div>
                 <p>
-                  My work as an AI Data Evaluator infuses extreme precision into my coding practices. Whether designing dataset annotation workflows or building high-performance Next.js apps, I deliver polished, user-centric systems that perform exceptionally and deliver real value to clients.
+                  My background as an AI Data Evaluator has trained me to spot minor details and bugs that others might miss. I bring this same standard of precision to my engineering work—making sure that components are modular, code is well-structured, and the user interface feels incredibly polished and fluid.
                 </p>
               </div>
 
@@ -336,9 +336,9 @@ export default function Home() {
                 <h3 className={styles.timelineTitle}>Freelance Full Stack Developer</h3>
                 <span className={styles.timelineBadge}>Klawz Tech (2021 - Present)</span>
               </div>
-              <div className={styles.timelineRole}>Founder & Lead Architect</div>
+              <div className={styles.timelineRole}>Founder & Lead Developer</div>
               <p className={styles.timelineDesc}>
-                Architecting modern responsive web applications, secure cloud backend synchronizations, and customer billing interfaces. Leading client diversity projects, focusing on highly optimized full-stack design patterns.
+                I build complete, responsive websites and web apps for local businesses and online clients. I handle everything from design to database setup, secure payment integration (like Paystack), and deploying to cloud platforms like Vercel and Railway. I focus on making pages load fast, look clean, and actually solve the client's business needs.
               </p>
             </div>
 
@@ -350,7 +350,7 @@ export default function Home() {
               </div>
               <div className={styles.timelineRole}>Data Evaluation Specialist</div>
               <p className={styles.timelineDesc}>
-                Executing high-accuracy data annotation, complex pattern recognition, model output quality audits, and custom dataset validations to build high-performance neural networks.
+                Worked on high-precision data annotation and quality assurance to train machine learning models. I reviewed large datasets, labeled images and text with extreme accuracy, and audited model outputs to make sure the AI predictions were correct. This taught me a massive amount of attention to detail and data quality.
               </p>
             </div>
 
@@ -362,7 +362,7 @@ export default function Home() {
               </div>
               <div className={styles.timelineRole}>Systems & Network Troubleshooter</div>
               <p className={styles.timelineDesc}>
-                Troubleshooting active network setups, executing operating system configurations, administering localized databases, and driving swift digital adoption of unified technical workflows.
+                Spent my internship fixing computers, setting up local networks, and troubleshooting office systems. I helped staff with day-to-day technical issues, configured operating systems, kept local databases running smoothly, and made sure office tech stayed online and secure.
               </p>
             </div>
 
@@ -374,7 +374,7 @@ export default function Home() {
               </div>
               <div className={styles.timelineRole}>Operations Specialist & Hardware Technician</div>
               <p className={styles.timelineDesc}>
-                Directing day-to-day operations including high-volume printing, photocopying, typesetting, and digital café services. Gained extensive, lifelong technical experience troubleshooting, maintaining, and repairing printers and heavy-duty office machinery while consistently delivering high-quality customer service.
+                Grew up working in my family's shop, helping run printing, photocopying, document formatting (typesetting), and café operations. Over the years, I learned how to physically take apart, troubleshoot, and fix printers and office copiers. This is where I built my work ethic, customer service skills, and my hands-on love for hardware and technology.
               </p>
             </div>
 
