@@ -72,6 +72,32 @@
   box-shadow: 0 6px 16px rgba(0, 162, 232, 0.35);
 }
 
+/* Mobile Toggle & Menu Base (Desktop Hidden) */
+.navToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+}
+
+.navToggleLine {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mobileMenu {
+  display: none;
+}
+
 /* Hero Section / Launchpad */
 .hero {
   min-height: calc(100vh - 75px);
@@ -549,6 +575,12 @@
   letter-spacing: 0.5px;
 }
 
+.inProgress {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
 .projectTitle {
   font-family: var(--font-outfit);
   font-size: 1.65rem;
@@ -716,43 +748,127 @@
     padding: 0 1.5rem;
   }
 
+  .section {
+    padding: 5rem 0;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Nav Mobile Styles */
   .navLinks {
     display: none;
   }
 
+  .navCta {
+    display: none;
+  }
+
   .navInner {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 
-  .trustStrip {
-    grid-template-columns: repeat(2, 1fr);
+  .navToggle {
+    display: flex;
   }
 
+  /* Hamburger transform when menu is open */
+  .navToggleOpen .navToggleLine:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navToggleOpen .navToggleLine:nth-child(2) {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  .navToggleOpen .navToggleLine:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Mobile Fullscreen Overlay Menu */
+  .mobileMenu {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 12, 16, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-20px);
+  }
+
+  .mobileMenuOpen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobileMenuLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    width: 100%;
+  }
+
+  .mobileMenuLinks a {
+    font-family: var(--font-outfit);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    transition: color 0.3s ease, transform 0.2s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .mobileMenuLinks a:hover,
+  .mobileMenuLinks a:active {
+    color: white;
+    transform: scale(1.05);
+  }
+
+  .mobileMenuCta {
+    background: linear-gradient(135deg, var(--m-light-blue), var(--m-dark-blue));
+    color: white !important;
+    padding: 0.75rem 2.2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 162, 232, 0.25);
+  }
+
+  /* Hero Section Responsiveness */
   .hero {
     flex-direction: column;
     text-align: center;
     padding-top: 6rem;
     gap: 3rem;
+    min-height: auto;
   }
 
   .heroTitle {
     font-size: 2.8rem;
   }
 
-  .sectionTitle {
-    font-size: 2.2rem;
-  }
-
   .heroSubtitle {
+    font-size: 1.1rem;
     margin: 0 auto 2rem;
+    line-height: 1.6;
   }
 
   .heroButtons {
     justify-content: center;
-  }
-
-  .skillsContainer {
-    grid-template-columns: 1fr;
   }
 
   .heroImageContainer {
@@ -760,9 +876,143 @@
     margin-top: 2rem;
   }
 
+  .heroImageWrapper {
+    width: min(300px, 75vw);
+    height: min(300px, 75vw);
+  }
+
+  .heroImageGlow {
+    width: min(320px, 80vw);
+    height: min(320px, 80vw);
+  }
+
+  /* Grids and Spacing adjustments */
+  .trustStrip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+  }
+
+  .trustItem {
+    padding: 1.2rem 1rem;
+  }
+
+  .trustMetric {
+    font-size: 1.4rem;
+  }
+
+  .aboutCard {
+    padding: 1.6rem;
+  }
+
+  .aboutCard h3 {
+    font-size: 1.3rem;
+  }
+
+  .aboutCard p {
+    font-size: 1rem;
+  }
+
+  .skillsContainer {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .skillCategory {
+    padding: 1.8rem 1.2rem;
+  }
+
+  .skillCategory h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .skillTag {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .projectCard {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .projectTitle {
+    font-size: 1.4rem;
+  }
+
+  .projectDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projectTech {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Timeline */
+  .timelineItem {
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
   .timelineHeader {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
+  }
+
+  .timelineTitle {
+    font-size: 1.3rem;
+  }
+
+  .timelineRole {
+    font-size: 0.95rem;
+  }
+
+  .timelineDesc {
+    font-size: 0.95rem;
+  }
+
+  /* Contact */
+  .contactLinks {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    max-width: 320px;
+    margin: 2rem auto 0;
+  }
+
+  .contactLinks a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+
+  .trustStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutStats {
+    grid-template-columns: 1fr;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    font-size: 0.95rem;
   }
 }
