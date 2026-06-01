@@ -234,12 +234,14 @@ export default function Home() {
               <div className={styles.projectTech}>
                 <span className={styles.techDot}>Next.js</span>
                 <span className={styles.techDot}>Tailwind CSS</span>
-                <span className={styles.techDot}>Stripe</span>
+                <span className={styles.techDot}>Paystack</span>
+                <span className={styles.techDot}>Neon DB</span>
+                <span className={styles.techDot}>Cloudinary</span>
               </div>
               <p className={styles.projectDescription}>
                 <strong>Problem:</strong> High transaction friction in typical dropshipping storefronts.<br /><br />
                 <strong>Built:</strong> A high-conversion, highly optimized dropshipping eCommerce portal with instant checkout flow.<br /><br />
-                <strong>Learned:</strong> API integration, secure payment gateway handling, and fast server-side rendering architecture.
+                <strong>Learned:</strong> API integration, secure Paystack payment gateway handling, Cloudinary media storage, and serverless Postgres (Neon DB) architecture.
               </p>
               <div className={styles.projectLinks}>
                 <a href="https://marts-b-i-ecommerce-94cl.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.projectCta}>
